@@ -4,32 +4,25 @@ using ViteAspire9.Api.Database;
 
 namespace ViteAspire9.Api.Features.Resume.UseCases;
 
-public class CreateResume
+public static class CreateResume
 {
 	public class Command : IRequest<Result<Error, Response>>
 	{
-		public required string Name { get; set; }
-		public required string Email { get; set; }
-		public required string Phone { get; set; }
-		public required string Summary { get; set; }
-		public required List<Experience> WorkExperiences { get; set; }
-		public required List<Education> Educations { get; set; }
+		public required string Name { get; init; }
+		public required string Email { get; init; }
+		public required string Phone { get; init; }
+		public required string Summary { get; init; }
+		public required List<Experience> WorkExperiences { get; init; }
+		public required List<Education> Educations { get; init; }
 	}
 
 	public class Response
 	{
-		public required Resume Resume { get; set; }
+		public required Resume Resume { get; init; }
 	}
 
-	public class Handler : IRequestHandler<Command, Result<Error, Response>>
+	public class Handler(IResumeRepository resumeRepository) : IRequestHandler<Command, Result<Error, Response>>
 	{
-		private readonly IResumeRepository _resumeRepository;
-
-		public Handler(IResumeRepository resumeRepository)
-		{
-			_resumeRepository = resumeRepository;
-		}
-
 		public async Task<Result<Error, Response>> Handle(Command command, CancellationToken cancellationToken)
 		{
 			var resume = new Resume
@@ -50,7 +43,7 @@ public class CreateResume
 			ResumeEntity newEntity;
 			try
 			{
-				newEntity = await _resumeRepository.CreateAsync(resume, cancellationToken);
+				newEntity = await resumeRepository.CreateAsync(resume, cancellationToken);
 			}
 			catch (Exception e)
 			{
@@ -59,10 +52,8 @@ public class CreateResume
 
 			return Result.Succeed(new Response { Resume = newEntity.ToResume() });
 		}
-		
+
 		private static string GenerateSlug(string name)
-		{
-			return name.ToLower().Replace(' ', '-') + "-" + Guid.NewGuid().ToString()[..5];
-		}
+			=> name.ToLower().Replace(' ', '-') + "-" + Guid.NewGuid().ToString()[..5];
 	}
 }

@@ -8,7 +8,7 @@ public class GetResumeById
 {
 	public class Query : IRequest<Result<Error, Resume>>
 	{
-		public Guid Id { get; set; }
+		public Guid Id { get; init; }
 	}
 
 	public class Handler(IResumeRepository resumeRepository) : IRequestHandler<Query, Result<Error, Resume>>

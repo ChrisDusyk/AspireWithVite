@@ -13,14 +13,10 @@ public interface IResumeRepository
 internal class ResumeRepository(ResumeDbContext context) : IResumeRepository
 {
 	public ValueTask<ResumeEntity?> GetResumeAsync(Guid id, CancellationToken cancellationToken = default)
-	{
-		return context.Resumes.FindAsync([id], cancellationToken: cancellationToken);
-	}
-	
+		=> context.Resumes.FindAsync([id], cancellationToken: cancellationToken);
+
 	public Task<ResumeEntity?> GetResumeBySlugAsync(string slug, CancellationToken cancellationToken = default)
-	{
-		return context.Resumes.SingleOrDefaultAsync(r => r.Slug == slug, cancellationToken);
-	}
+		=> context.Resumes.SingleOrDefaultAsync(r => r.Slug == slug, cancellationToken);
 
 	public async ValueTask<ResumeEntity> CreateAsync(Resume resume, CancellationToken cancellationToken)
 	{
