@@ -1,22 +1,4 @@
-import { useState } from "react";
-
-function App() {
-  const [isLoading, setIsLoading] = useState(false);
-  const [apiMessage, setApiMessage] = useState<string | null>(null);
-
-  const handleCallToAction = async () => {
-    setIsLoading(true);
-    try {
-      const response = await fetch("/api/hello");
-      const data = await response.text();
-      setApiMessage(data);
-    } catch (error) {
-      setApiMessage(`Failed to connect to the server: ${error}`);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
+export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Services Section */}
@@ -61,20 +43,20 @@ function App() {
       </section>
 
       {/* Call to Action Section */}
-      <section className="container mx-auto px-4 py-12 text-center">
+      {/* <section className="container mx-auto px-4 py-12 text-center">
         <h2 className="text-3xl font-bold text-gray-800 mb-6">
           Ready to Transform Your Business?
         </h2>
         <button
           onClick={handleCallToAction}
           disabled={isLoading}
-          className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold 
+          className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold
                      hover:bg-blue-700 transition-colors disabled:bg-blue-400"
         >
           {isLoading ? "Connecting..." : "Get Started"}
         </button>
         {apiMessage && <p className="mt-4 text-gray-600">{apiMessage}</p>}
-      </section>
+      </section> */}
 
       {/* Testimonials Section */}
       <section className="bg-gray-100 py-16">
@@ -112,5 +94,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
