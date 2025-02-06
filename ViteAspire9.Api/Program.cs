@@ -32,8 +32,6 @@ app.UseHttpsRedirection();
 
 app.MapDefaultEndpoints();
 
-app.MapGet("/hello", () => "Hello World!");
-
 app.ConfigureResumeEndpoints();
 
 app.UseCors();

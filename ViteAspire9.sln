@@ -8,6 +8,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViteAspire9.ServiceDefaults
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViteAspire9.Api", "ViteAspire9.Api\ViteAspire9.Api.csproj", "{8ACFCB42-1AC1-4B47-8202-290170B7BB52}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{F17093F8-78B6-45FB-8758-F8B3D462AB4D}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "aspire", "aspire", "{B0662BAB-994A-4A03-BBD6-96BE6CB5766E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,5 +39,9 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {49DFF2D6-0B1E-41BC-B990-F9979B21D4D1}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CF2E3B9D-B72D-4AE4-BBB4-53D478289329} = {B0662BAB-994A-4A03-BBD6-96BE6CB5766E}
+		{939FE247-ED9C-4469-A0E4-2905E2026936} = {B0662BAB-994A-4A03-BBD6-96BE6CB5766E}
 	EndGlobalSection
 EndGlobal
