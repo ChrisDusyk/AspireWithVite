@@ -1,0 +1,54 @@
+### Get a resume by ID
+
+GET {{BaseUrl}}/resume/get-resume/0194cde3-1246-7476-937b-bef0244022fc
+Accept: application/json
+
+### Get by Slug
+
+GET {{BaseUrl}}/resume/get-resume-by-slug/john-doe-6a959
+Accept: application/json
+
+### Create a new resume
+
+POST {{BaseUrl}}/resume/create-resume
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "phone": "123-456-7890",
+  "summary": "Experienced software developer with a strong background in C# and .NET technologies.",
+  "workExperiences": [
+    {
+      "title": "Senior Software Developer",
+      "company": "Tech Solutions Inc.",
+      "startDate": "2018-01-01T00:00:00Z",
+      "endDate": "2022-12-31T00:00:00Z",
+      "description": "Developed and maintained web applications using ASP.NET Core and Angular."
+    },
+    {
+      "title": "Software Developer",
+      "company": "Innovative Apps LLC",
+      "startDate": "2015-06-01T00:00:00Z",
+      "endDate": "2017-12-31T00:00:00Z",
+      "description": "Worked on various projects involving C#, WPF, and SQL Server."
+    }
+  ],
+  "educations": [
+    {
+      "degree": "Bachelor of Science in Computer Science",
+      "description": "Focused on software development and data structures.",
+      "startDate": "2011-09-01T00:00:00Z",
+      "endDate": "2015-05-31T00:00:00Z",
+      "school": "State University"
+    },
+    {
+      "degree": "Master of Science in Software Engineering",
+      "description": "Specialized in software architecture and design patterns.",
+      "startDate": "2016-09-01T00:00:00Z",
+      "endDate": "2018-05-31T00:00:00Z",
+      "school": "Tech University"
+    }
+  ]
+}
