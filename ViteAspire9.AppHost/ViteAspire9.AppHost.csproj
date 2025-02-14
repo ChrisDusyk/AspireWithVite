@@ -20,5 +20,6 @@
 
     <ItemGroup>
         <ProjectReference Include="..\ViteAspire9.Api\ViteAspire9.Api.csproj"/>
+        <ProjectReference Include="..\ViteAspire9.Database.Migrator\ViteAspire9.Database.Migrator.csproj" />
     </ItemGroup>
 </Project>
