@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace ViteAspire9.Api.Migrations
+namespace ViteAspire9.Database.Migrations
 {
     /// <inheritdoc />
     public partial class Initial : Migration

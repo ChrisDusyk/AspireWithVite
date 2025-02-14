@@ -1,8 +1,8 @@
 ﻿using System.Reflection;
 
-namespace ViteAspire9.Api;
+namespace ViteAspire9.Application;
 
-internal static class AssemblyMarker
+public static class AssemblyMarker
 {
 	public static Assembly Assembly => typeof(AssemblyMarker).Assembly;
 }

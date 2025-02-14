@@ -8,7 +8,7 @@ using ViteAspire9.Api.Database;
 
 #nullable disable
 
-namespace ViteAspire9.Api.Migrations
+namespace ViteAspire9.Database.Migrations
 {
     [DbContext(typeof(ResumeDbContext))]
     partial class ResumeDbContextModelSnapshot : ModelSnapshot
@@ -17,7 +17,7 @@ namespace ViteAspire9.Api.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.1")
+                .HasAnnotation("ProductVersion", "9.0.2")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
