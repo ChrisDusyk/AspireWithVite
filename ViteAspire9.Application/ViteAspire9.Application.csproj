@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Kontur.Results" Version="3.0.0" />
+      <PackageReference Include="MediatR" Version="12.4.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ViteAspire9.Database\ViteAspire9.Database.csproj" />
+      <ProjectReference Include="..\ViteAspire9.Domain\ViteAspire9.Domain.csproj" />
+    </ItemGroup>
+
+</Project>
