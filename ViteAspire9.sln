@@ -15,6 +15,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{F17093F8
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "aspire", "aspire", "{B0662BAB-994A-4A03-BBD6-96BE6CB5766E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViteAspire9.Database", "ViteAspire9.Database\ViteAspire9.Database.csproj", "{68FD64AB-72CD-47F2-8122-641CA2543239}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViteAspire9.Domain", "ViteAspire9.Domain\ViteAspire9.Domain.csproj", "{FD4BBF0C-DB84-454C-AB87-AE8F2352CCCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViteAspire9.Application", "ViteAspire9.Application\ViteAspire9.Application.csproj", "{1D79CE02-6277-468C-BF6D-E70666FBE3FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViteAspire9.Database.Migrator", "ViteAspire9.Database.Migrator\ViteAspire9.Database.Migrator.csproj", "{8D36C1E2-1C22-4A7B-9D92-190406B8934A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +41,22 @@ Global
 		{8ACFCB42-1AC1-4B47-8202-290170B7BB52}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8ACFCB42-1AC1-4B47-8202-290170B7BB52}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8ACFCB42-1AC1-4B47-8202-290170B7BB52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68FD64AB-72CD-47F2-8122-641CA2543239}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68FD64AB-72CD-47F2-8122-641CA2543239}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68FD64AB-72CD-47F2-8122-641CA2543239}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68FD64AB-72CD-47F2-8122-641CA2543239}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD4BBF0C-DB84-454C-AB87-AE8F2352CCCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD4BBF0C-DB84-454C-AB87-AE8F2352CCCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD4BBF0C-DB84-454C-AB87-AE8F2352CCCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD4BBF0C-DB84-454C-AB87-AE8F2352CCCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D79CE02-6277-468C-BF6D-E70666FBE3FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D79CE02-6277-468C-BF6D-E70666FBE3FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D79CE02-6277-468C-BF6D-E70666FBE3FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D79CE02-6277-468C-BF6D-E70666FBE3FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D36C1E2-1C22-4A7B-9D92-190406B8934A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D36C1E2-1C22-4A7B-9D92-190406B8934A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D36C1E2-1C22-4A7B-9D92-190406B8934A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D36C1E2-1C22-4A7B-9D92-190406B8934A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

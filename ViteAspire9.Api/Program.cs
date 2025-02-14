@@ -8,11 +8,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
-builder.AddNpgsqlDbContext<ResumeDbContext>("resume");
-builder.Services.AddScoped<IResumeRepository, ResumeRepository>();
+builder.AddResumeDatabase("resume");
+builder.Services.AddRepositories();
 
 builder.Services.AddMediatR(config =>
-	config.RegisterServicesFromAssembly(ViteAspire9.Api.AssemblyMarker.Assembly));
+	config.RegisterServicesFromAssembly(ViteAspire9.Application.AssemblyMarker.Assembly));
 builder.Services.AddCors(opts => opts.AddDefaultPolicy(policy => policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()));
 
 builder.AddServiceDefaults();
@@ -25,7 +25,7 @@ if (app.Environment.IsDevelopment())
 	app.MapOpenApi();
 	app.MapScalarApiReference();
 
-	DbInitializer.Initialize(app.Services);
+	/*DbInitializer.Initialize(app.Services);*/
 }
 
 app.UseHttpsRedirection();

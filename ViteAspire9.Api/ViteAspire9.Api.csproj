@@ -11,19 +11,20 @@
         <PackageReference Include="Kontur.Results" Version="3.0.0" />
         <PackageReference Include="MediatR" Version="12.4.1" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.1"/>
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.1">
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.2">
           <PrivateAssets>all</PrivateAssets>
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="9.0.2" />
         <PackageReference Include="Scalar.AspNetCore" Version="2.0.11" />
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\ViteAspire9.Application\ViteAspire9.Application.csproj" />
+      <ProjectReference Include="..\ViteAspire9.Database.Migrator\ViteAspire9.Database.Migrator.csproj" />
+      <ProjectReference Include="..\ViteAspire9.Database\ViteAspire9.Database.csproj" />
+      <ProjectReference Include="..\ViteAspire9.Domain\ViteAspire9.Domain.csproj" />
       <ProjectReference Include="..\ViteAspire9.ServiceDefaults\ViteAspire9.ServiceDefaults.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Migrations\" />
     </ItemGroup>
 
 </Project>
