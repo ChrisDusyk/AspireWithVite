@@ -1,15 +1,5 @@
-### Get a resume by ID
-
-GET {{BaseUrl}}/resume/get-resume/01950128-a63b-7d2e-815c-9b3068e30255
-Accept: application/json
-
-### Get by Slug
-
-GET {{BaseUrl}}/resume/get-resume-by-slug/john-doe-22fc6
-Accept: application/json
-
-### Create a new resume
-
+### Create a new Resume
+# @name newResume
 POST {{BaseUrl}}/resume/create-resume
 Content-Type: application/json
 Accept: application/json
@@ -53,4 +43,14 @@ Accept: application/json
   ]
 }
 
-###
+> {% client.global.set("new-resume", response.body) %}
+
+### Get a resume by ID
+
+GET {{BaseUrl}}/resume/get-resume/{{new-resume.id}}
+Accept: application/json
+
+### Get by Slug
+
+GET {{BaseUrl}}/resume/get-resume-by-slug/{{new-resume.slug}}
+Accept: application/json
