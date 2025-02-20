@@ -22,11 +22,14 @@ var api = builder
 	.WaitFor(dbMigrator);
 
 var ui = builder
-	.AddViteApp("ui", "../ViteAspire9.UI", packageManager: "pnpm")
+	.AddPnpmApp("ui", "../ViteAspire9.UI", scriptName: "dev")
 	.WithPnpmPackageInstallation()
+	.WithHttpEndpoint(port: 3000, isProxied: false)
 	.WithExternalHttpEndpoints()
 	.WithReference(api)
 	.WaitFor(api)
-	.WithEnvironment("VITE_API_URL", api.GetEndpoint("https"));
+	.WithEnvironment("VITE_API_URL", api.GetEndpoint("https"))
+	.WithEnvironment("PORT", "3000")
+	.PublishAsDockerFile();
 
 builder.Build().Run();
